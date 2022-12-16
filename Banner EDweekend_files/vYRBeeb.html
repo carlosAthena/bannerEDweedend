@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://cdpn.io/AlvaroFelipe/fullpage/vYRBeeb -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Banner EDweekend</title>
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Orbitron:wght@600&display=swap');
+
+body {
+  font-family: Manrope, sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;;
+  color: #d7d8e0;
+}
+
+.main-banner {
+  background: radial-gradient(79.43% 251.58% at 23.18% 73.07%,#0142a0 0,#0f133a 44.41%,#101034 56.43%,#141034 69.58%,#301436 100%,#411958 0);
+  padding: 2rem 1rem;
+}
+
+.grid-container {
+  margin: auto;
+  grid-template-columns: repeat(2,calc(50% - 1rem));
+  gap: 2rem;
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    max-width: 1200px;
+  }
+}
+
+.title {
+  font-family: Orbitron;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.line-2 {
+  color: #16f4d0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  margin: 0 0 2rem;
+}
+
+/* Graphic */
+.graphic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.graphic img {
+  position: absolute;
+}
+
+.graphic-man {
+  bottom: -2rem;
+  width: 100%;
+}
+
+.graphic-logo {
+  right: 20%;
+  top: -12%;
+  width: 90%;
+}
+
+.graphic-energy {
+  right: 22%;
+  top: -8%;
+  mix-blend-mode: screen;
+  -webkit-animation: turn1 12s linear infinite;
+          animation: turn1 12s linear infinite;
+}
+
+@-webkit-keyframes turn1 {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes turn1 {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+@-webkit-keyframes turn2 {
+  to {
+    transform: rotate(-1turn)
+  }
+}
+
+@keyframes turn2 {
+  to {
+    transform: rotate(-1turn)
+  }
+}
+
+
+.graphic-go {
+  right: 0rem;
+  width: 28%;
+  mix-blend-mode: screen;
+}
+
+
+.graphic-circle-1,
+.graphic-circle-2 {
+  mix-blend-mode: screen;
+  width: 90%;
+  right: 20%;
+  top: -12%;
+}
+
+.graphic-circle-1 {
+  -webkit-animation: turn2 20s linear infinite;
+          animation: turn2 20s linear infinite;
+}
+
+.graphic-circle-2 {
+  -webkit-animation: turn1 24s linear infinite;
+          animation: turn1 24s linear infinite;
+}
+
+/* Countdown */
+.countdown {
+  margin-bottom: .75rem;
+}
+
+.countdown-number {
+  font-size: 1.75rem;
+  margin-right: 0.25rem;
+  font-weight: 700;
+  color: #dfa6f9;
+}
+.countdown-letter {
+  font-size: 1rem;
+  color: #a6d6f9;
+}
+.countdown-item {
+  margin: 0 .8rem;
+  position: relative;
+}
+
+.countdown-item:not(:last-of-type):before {
+  content: "";
+  height: 1rem;
+  width: 1px;
+  background: #a6d6f9;
+  display: block;
+  right: -.8rem;
+  position: absolute;
+}
+
+
+/* Form */
+.form {
+  display: flex;
+  height: 2.5rem;
+}
+
+.input {
+  background-color: rgba(255,255,255,.04) !important;
+  border-radius: 0.25rem 0 0 0.25rem;
+  border-color: rgba(255,255,255,.3) !important;
+  font-size: 0.75rem;
+  display: inline-block;
+  color: #fff !important;
+  display: block;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  width: 15rem;
+  padding: .5rem 1rem;
+  font-family: inherit;
+  background-color: rgba(255,255,255,.04) !important;
+  border-radius: .25rem 0 0 .25rem;
+  border: 1px solid rgba(255,255,255,.3) !important;
+  font-size: .875rem;
+}
+
+.button {
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #2d83fc !important;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  margin: 0!important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 0 .25rem .25rem 0;
+  font-size: 1rem;
+  background-color: #fff;
+  padding: 0 1.5rem;
+  border: none;
+}
+
+.form-hint {
+  font-size: .75rem;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <section class="main-banner">
+  <!-- grid-container-->
+  <div class="grid-container">
+    <!-- banner-container -->
+    <div>
+      <!-- Titulo -->
+      <div>
+        <h1 class="title">
+          <span class="line-1">Domina la tecnología</span>
+          <br>
+          <span class="line-2">con el EDweekend</span>
+        </h1>
+      </div>
+      <!-- Descripción -->
+      <p class="description">
+        Del 30 de junio al 3 de julio vuelve el EDweekend, el fin de semana para que domines la tecnología con los precios más bajos del año. No postergues más tu educación ni tus sueños ¡Tu momento ha llegado!</p>
+      <!-- Countdown -->
+      <div class="countdown flex">
+        <p>Empieza en:</p>
+        <div class="flex">
+          <p class="countdown-item flex">
+            <span class="countdown-number">03</span>
+            <span class="countdown-letter">D</span>
+          </p>
+          <p class="countdown-item flex">
+            <span class="countdown-number">11</span>
+            <span class="countdown-letter">H</span>
+          </p>
+          <p class="countdown-item flex">
+            <span class="countdown-number">48</span>
+            <span class="countdown-letter">M</span>
+          </p>
+          <p class="countdown-item flex">
+            <span class="countdown-number">19</span>
+            <span class="countdown-letter">S</span>
+          </p>
+        </div>
+      </div>
+      <!-- Sección de formulario -->
+      <div>
+        <!-- Formulario de inscripción -->
+        <form class="form">
+          <input type="email" name="email" class="input" required="" placeholder="Ingresa tu correo electrónico">
+          <button type="submit" class="button">Regístrate</button>
+        </form>
+        <!-- Mensaje -->
+        <p class="form-hint">Deja tu correo y sé el primero en acceder a los descuentos</p>
+      </div>
+    </div>
+    <!-- Gráfico -->
+    <div class="graphic">
+      <img class="graphic-man" src="./tech-man.png">
+      <img class="graphic-go" src="./go-icon.png">
+      <img class="graphic-logo" src="./edteam-logo.png">
+      <img class="graphic-circle-1" src="./power-circle-1.png">
+       <img class="graphic-circle-2" src="./power-circle-2.png">
+      <img class="graphic-energy" src="./banner-circle.png">
+    </div>
+  </div>
+</section>
+  
+  
+  
+  
+
+
+
+
+ 
+</body></html>
