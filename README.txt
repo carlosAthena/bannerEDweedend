@@ -1,7 +1,5 @@
 Banner de EDweekend de EDteam
 
-
-
 Código
 
 https://codepen.io/AlvaroFelipe/pen/vYRBeeb
